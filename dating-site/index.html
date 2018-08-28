@@ -12,16 +12,20 @@
     <div id="header"></div>
     <form id="generalForm" name="generalForm">
       First name:<br>
-      <input type="text" name="firstName"><br>
+      <input type="text" name="firstName" required><br>
       Last name:<br>
-      <input type="text" name="lastName"><br>
+      <input type="text" name="lastName" required><br>
       Number:<br>
       <input type="text" name="phone"><br>
       Age:<br>
-      <input type="text" name="age"><br>
+      <input type="number" min="21" name="age" required><br>
       <br>
       Height:<br>
-      <input type="number" name="height"><br>
+      <select name="height">
+        <option value="short">Under 5'5"</option>
+        <option value="medium">5'5" to 5'9"</option>
+        <option value="tall">Over 5'9"</option>
+      </select><br>
       <br>
 
 
@@ -34,27 +38,28 @@
       <br>
       Sexual Preference:
       <select name="sexualPreference">
-        <option value="man">Guy</option>
-        <option value="woman">Gal</option>
+        <option value="male">Guy</option>
+        <option value="female">Gal</option>
         <option value="noPreference">No Preference</option>
       </select><br>
       Age Range Preference:
       <select name="agePref">
-        <option value="under40">21 to 40</option>
-        <option value="over40">40+</option>
+        <option value="younger">21 to 40</option>
+        <option value="older">40+</option>
       </select><br>
       Height Preference:
       <select name="heightPreference">
-        <option value="short">Short (shorter than 5'8")</option>
-        <option value="tall">Tall (5'8" or taller)</option>
+        <option value="short">Short (shorter than 5'5")</option>
+        <option value="medium">Medium (between 5'5" and 5'9")</option>
+        <option value="tall">Tall (5'9" or taller)</option>
       </select><br>
       Relationship Goal:
       <select name="relationshipGoal">
         <option value="casual">Casual</option>
-        <option value="marraige">Marriage</option>
+        <option value="marriage">Marriage</option>
       </select>
       <br>
-      <button id="submitGeneralFormButton" type="submit" class="btn btn-warning" name="button">Find Your Perfect Love Match!</button>
+      <button id="submitGeneralFormButton" type="submit" class="btn btn-warning" name="button">Take the personality quiz!</button>
     </form>
 
     <form id="personalityForm">
@@ -97,9 +102,11 @@
       <br>
       <button id="findMatchButton" type="submit" class="btn btn-warning" name="button">Find Your Perfect Love Match!</button>
     </form>
+    <div id="matches">
+      <h1>Here are your amazing matches:</h1>
+      <p><span id="personList"></span> </p>
+    </div>
 
-    <h1 id="matches">Here are your amazing matches:</h1>
-    <p><span id="personList"></span> </p>
     <div id="footer"></div>
   </body>
 </html>
