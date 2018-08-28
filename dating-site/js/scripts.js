@@ -76,14 +76,12 @@ matchGroup.forEach(function(person, index){
 
     // console.log(allProfiles);
     person = new Profile();
-    console.log(person);
     allProfiles.push(person);
-    console.log(allProfiles);
-    // console.log(allProfiles);
-    console.log(allProfiles);
 
     // var allProfilesOutput = allProfiles.join(",");
-    $("#personList").text(allProfiles);
+    // $("#personList").text(allProfiles);
+
+    $("#personList").append("<div class='card'><span class='personListSingle'>" + allProfiles + "</span></div>");
 
 
   }); //generalForm close
