@@ -10,103 +10,150 @@
   </head>
   <body>
     <div id="header"></div>
-    <div class="body">
-    <form id="generalForm" name="generalForm">
-      First name:<br>
-      <input type="text" name="firstName" required><br>
-      Last name:<br>
-      <input type="text" name="lastName" required><br>
-      Number:<br>
-      <input type="text" name="phone"><br>
-      Age:<br>
-      <input type="number" min="21" name="age" required><br>
-      <br>
-      Height:<br>
-      <select name="height">
-        <option value="short">Under 5'5"</option>
-        <option value="medium">5'5" to 5'9"</option>
-        <option value="tall">Over 5'9"</option>
-      </select><br>
-      <br>
 
+    <div class="landing-page">
+      <div class="main-image">
+        <h2>We hope your have the time of your life.</h2>
+      </div>
+      <div class="testimonial-1">
 
-      <h2>Demographics</h2>
-      Gender:
-      <select name="gender">
-        <option value="female">dudette</option>
-        <option value="male">dude</option>
-      </select>
-      <br>
-      Sexual Preference:
-      <select name="sexualPreference">
-        <option value="male">Guy</option>
-        <option value="female">Gal</option>
-        <option value="noPreference">No Preference</option>
-      </select><br>
-      Age Range Preference:
-      <select name="agePref">
-        <option value="younger">21 to 40</option>
-        <option value="older">40+</option>
-      </select><br>
-      Height Preference:
-      <select name="heightPreference">
-        <option value="short">Short (shorter than 5'5")</option>
-        <option value="medium">Medium (between 5'5" and 5'9")</option>
-        <option value="tall">Tall (5'9" or taller)</option>
-      </select><br>
-      Relationship Goal:
-      <select name="relationshipGoal">
-        <option value="casual">Casual</option>
-        <option value="marriage">Marriage</option>
-      </select>
-      <br>
-      <button id="submitGeneralFormButton" type="submit" class="btn btn-warning" name="button">Take the personality quiz!</button>
-    </form>
+      </div>
+      <div class="btn-to-questionaire">
 
-    <form id="personalityForm">
-      <h2>Personality Section</h2>
-      <p>Question 1</p>
-      <select class="form-control" name="personality" id="question1">
-        <option value="a">Coffee</option>
-        <option value="b">Tea</option>
-        <option value="c">Kombucha</option>
-        <option value="d">Water</option>
-      </select><br>
-      <p>Question 2</p>
-      <select class="form-control" name="personality" id="question2">
-        <option value="a">Coffee</option>
-        <option value="b">Tea</option>
-        <option value="c">Kombucha</option>
-        <option value="d">Water</option>
-      </select><br>
-      <p>Question 3</p>
-      <select class="form-control" name="personality" id="question3">
-        <option value="a">Coffee</option>
-        <option value="b">Tea</option>
-        <option value="c">Kombucha</option>
-        <option value="d">Water</option>
-      </select><br>
-      <p>Question 4</p>
-      <select class="form-control" name="personality" id="question4">
-        <option value="a">Coffee</option>
-        <option value="b">Tea</option>
-        <option value="c">Kombucha</option>
-        <option value="d">Water</option>
-      </select><br>
-      <p>Question 5</p>
-      <select class="form-control" name="personality" id="question5">
-        <option value="a">Coffee</option>
-        <option value="b">Tea</option>
-        <option value="c">Kombucha</option>
-        <option value="d">Water</option>
-      </select>
-      <br>
-      <button id="findMatchButton" type="submit" class="btn btn-warning" name="button">Find Your Perfect Love Match!</button>
-    </form>
+      </div>
+      <div class="testimonial-2">
+
+      </div>
+    </div>
+
+    <div class="demographics-page">
+      <div class="demographics-wrapper">
+        <form id="generalForm" name="generalForm">
+          <div class="about-you-container">
+            <h2>Tell us about you</h2>
+            <div class="form-group">
+              <label>First name:</label>
+              <input type="text" name="firstName" required>
+            </div>
+            <div class="form-group">
+              <label>Last name:</label>
+              <input type="text" name="lastName" required>
+            </div>
+            <div class="form-group">
+              <label>Number:</label>
+              <input type="text" name="phone">
+            </div>
+            <div class="form-group">
+              <label>Age:</label>
+              <input type="number" min="21" name="age" required>
+            </div>
+            <div>
+              <label>Height:</label>
+              <select name="height">
+                <option value="short">Under 5'5"</option>
+                <option value="medium">5'5" to 5'9"</option>
+                <option value="tall">Over 5'9"</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="demographics-container">
+            <h2>Demographics</h2>
+            <div>
+              Gender:
+              <select name="gender">
+                <option value="female">dudette</option>
+                <option value="male">dude</option>
+              </select>
+            </div>
+            <div>
+              Sexual Preference:
+              <select name="sexualPreference">
+                <option value="male">Guy</option>
+                <option value="female">Gal</option>
+                <option value="noPreference">No Preference</option>
+              </select>
+            </div>
+            <div>
+              Age Range Preference:
+              <select name="agePref">
+                <option value="younger">21 to 40</option>
+                <option value="older">40+</option>
+              </select>
+            </div>
+            <div>
+              Height Preference:
+              <select name="heightPreference">
+                <option value="short">Short (shorter than 5'5")</option>
+                <option value="medium">Medium (between 5'5" and 5'9")</option>
+                <option value="tall">Tall (5'9" or taller)</option>
+              </select>
+            </div>
+            <div>
+              Relationship Goal:
+              <select name="relationshipGoal">
+                <option value="casual">Casual</option>
+                <option value="marriage">Marriage</option>
+              </select>
+            </div>
+            <button id="submitGeneralFormButton" type="submit" class="btn btn-warning" name="button">Take the personality quiz!</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="questionnaire-page">
+      <form id="personalityForm">
+        <h2>Personality Section</h2>
+        <p>Question 1</p>
+        <select class="form-control" name="personality" id="question1">
+          <option value="a">Coffee</option>
+          <option value="b">Tea</option>
+          <option value="c">Kombucha</option>
+          <option value="d">Water</option>
+        </select><br>
+        <p>Question 2</p>
+        <select class="form-control" name="personality" id="question2">
+          <option value="a">Coffee</option>
+          <option value="b">Tea</option>
+          <option value="c">Kombucha</option>
+          <option value="d">Water</option>
+        </select><br>
+        <p>Question 3</p>
+        <select class="form-control" name="personality" id="question3">
+          <option value="a">Coffee</option>
+          <option value="b">Tea</option>
+          <option value="c">Kombucha</option>
+          <option value="d">Water</option>
+        </select><br>
+        <p>Question 4</p>
+        <select class="form-control" name="personality" id="question4">
+          <option value="a">Coffee</option>
+          <option value="b">Tea</option>
+          <option value="c">Kombucha</option>
+          <option value="d">Water</option>
+        </select><br>
+        <p>Question 5</p>
+        <select class="form-control" name="personality" id="question5">
+          <option value="a">Coffee</option>
+          <option value="b">Tea</option>
+          <option value="c">Kombucha</option>
+          <option value="d">Water</option>
+        </select>
+        <br>
+        <button id="findMatchButton" type="submit" class="btn btn-warning" name="button">Find Your Perfect Love Match!</button>
+      </form>
+    </div>
+
     <div id="matches">
       <h1>Here are your amazing matches:</h1>
-      <div class="row" id="personList">
+      <div class="row" id="personList"></div>
     </div>
+
+    <div id="footer"></div>
+
+  </body>
+</html>
 
 
 
@@ -114,7 +161,3 @@
         <p><span id="personList"></span> </p>
       </div>
     </div> -->
-
-    <div id="footer"></div>
-  </body>
-</html>

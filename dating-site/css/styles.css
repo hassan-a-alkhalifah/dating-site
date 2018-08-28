@@ -21,8 +21,106 @@
  }
  #footer {
    height: 190px;
+   width: 100%;
    background-image: url("../img/retro-footer.png");
    background-position: center;
-   bottom: 0;
-   width: 100%
+ }
+ .landing-page {
+   display: none;
+ }
+ .main-image {
+   height: 550px;
+   opacity: 0.5;
+   background-position: 0px 0px;
+   background-image: url("../img/80s-couple.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   text-align: center;
+   color: #EEE;
+   padding-top: 200px;
+ }
+ .main-image h2 {
+   text-shadow: 0 0 20px #000;
+ }
+ .testimonial-1 {
+   height: 240px;
+   width: 100%;
+   background-color: #F1D9FF;
+ }
+ .btn-to-questionaire {
+   height: 240px;
+   width: 100%;
+   background-image: url("../img/wallpaper.jpg");
+ }
+ .testimonial-2 {
+   height: 240px;
+   width: 100%;
+   background-color: #DDFFF7;
+ }
+ .demographics-page {
+   padding: 0 100px;
+   background-image: url("../img/wallpaper.jpg");
+   /* display: none; */
+ }
+ .demographics-wrapper {
+   margin: 0 auto;
+   background-color: white;
+   width: 900px;
+ }
+ .about-you-container {
+   margin-bottom: 30px;
+   padding: 20px 0;
+ }
+ .demographics-container {
+   padding: 20px 0 20px 75px;
+ }
+ #generalForm h2 {
+   text-align: center;
+ }
+ .demographics-wrapper input {
+   margin: 10px 0;
+   border-radius: 5px;
+   width: 260px;
+ }
+ .demographics-wrapper select{
+   margin: 10px 0;
+   height: 30px;
+   width: 260px;
+   background-image: linear-gradient(#EEE, #BBB);
+ }
+ .about-you-container div:nth-child(4) {
+   padding-left: 15px;
+ }
+ .about-you-container div:nth-child(5) {
+   padding-left: 45px;
+ }
+ .about-you-container div:nth-child(6) {
+   padding-left: 24px;
+ }
+ .about-you-container select {
+   width: 260px;
+ }
+ .about-you-container .form-group, .about-you-container div:nth-child(6){
+   margin: 0 165px;
+ }
+ .demographics-container div:nth-child(2){
+   padding-left: 108px;
+ }
+ .demographics-container div:nth-child(3){
+   padding-left: 30px;
+ }
+ .demographics-container div:nth-child(5){
+   padding-left: 30px;
+ }
+ .demographics-container div:nth-child(6){
+   padding-left: 36px;
+ }
+ #submitGeneralFormButton {
+   display: block;
+   margin: 20px auto;
+
+ }
+ .questionnaire-page {
+   /* display: none; */
  }
