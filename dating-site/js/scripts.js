@@ -1,16 +1,29 @@
 // ui logic
-function Profile() {
+function Profile(firstName, lastName, phone, age, height, gender, orientation, agePref, heightPref, relationship, personality) {
   this.firstName = generalForm.firstName.value;
   this.lastName = generalForm.lastName.value;
   this.phone = generalForm.phone.value;
   this.age = generalForm.age.value;
-  this.gender = generalForm.gender.value;
   this.height = generalForm.height.value;
+  this.gender = generalForm.gender.value;
   this.orientation = generalForm.sexualPreference.value;
   this.agePref = generalForm.agePref.value;
   this.heightPref = generalForm.heightPreference.value;
   this.relationship = generalForm.relationshipGoal.value;
   this.personality = [];
+  if (this.firstName == "") {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.phone = phone;
+  this.age = age;
+  this.height = height;
+  this.gender = gender;
+  this.orientation = orientation;
+  this.agePref = agePref;
+  this.heightPref = heightPref;
+  this.relationship = relationship;
+  this.personality = personality;
+}
 }
 Profile.prototype.personalityType = function() {
   var i = 0;
@@ -36,37 +49,54 @@ Profile.prototype.personalityType = function() {
 } return type
 }
 
+function matches(array, user) {
+  console.log(array);
+  var matchGroup = array.slice();
+  console.log(matchGroup);
+  var currentUser = user;
+matchGroup.forEach(function(person, index){
+  if (currentUser.relationship !== person.relationship);
+    matchGroup.splice(index, 1);
+  })
+  return matchGroup
+}
 // Submit form
   $(document).ready(function() {
 
     var allProfiles = [];
-    var person = {}
+    var person = {};
+    allProfiles.push(new Profile("Hulk", "Hogan", "111-1111", 34, "tall", "male", "female", "older", "tall", "casual", ["a"]))
+    // allProfiles.push(new Profile("Talia", "Shire", "111-1111", 34, "tall", "male", "female", "older", "tall", "casual", "a"))
+// console.log(allProfiles);
 
-  $("#submitGeneralFormButton").click(function(event){
+  $("#generalForm").submit(function(event){
     event.preventDefault();
-    $("#generalForm").hide();
+    // $("#generalForm").hide();
     $("#personalityForm").show();
-    person = new Profile()
-    allProfiles.push(person);
-    // console.log(allProfiles);
 
-    $("#personlist").append(allProfiles);
+    // console.log(allProfiles);
+    person = new Profile();
+    console.log(person);
+    allProfiles.push(person);
+    console.log(allProfiles);
+    // console.log(allProfiles);
+    console.log(allProfiles);
+
+    // var allProfilesOutput = allProfiles.join(",");
+    $("#personList").text(allProfiles);
 
 
   }); //generalForm close
 
   $("#findMatchButton").click(function(event){
     event.preventDefault();
-    $("#personalityForm").hide();
+    // $("#personalityForm").hide();
     $("#matches").show();
-
     $('select[name="personality"] option:selected').each(function(){
       var personalityQuestions = $(this).val();
       person.personality.push(personalityQuestions);
-      console.log(person.personality);
-      console.log(person);
-    }); //personalityForm close
-      console.log(person);
-  }); //Form Closing
-
+      }); //personalityForm close
+    // console.log(matches(allProfiles, person))
+    // console.log(allProfiles);
+    }); //Form Closing
 }); //Document Closing
