@@ -50,40 +50,53 @@ Profile.prototype.personalityType = function() {
 }
 
 function matches(array, user) {
-  console.log(array);
-  var matchGroup = array.slice();
-  console.log(matchGroup);
+  // console.log(array);
+  var matchGroup = []
+
   var currentUser = user;
-matchGroup.forEach(function(person, index){
-  if (currentUser.relationship !== person.relationship);
-    matchGroup.splice(index, 1);
+array.forEach(function(person, index){
+  if (currentUser.orientation == person.gender && person.orientation == currentUser.gender && currentUser.relationship == person.relationship){
+    if(((currentUser.agePref == "younger" && person.age < 40 )|| (currentUser.agePref == "older" && person.age >= 40)) && ((person.agePref == "younger" && currentUser.age < 40 )|| (person.agePref = "older" && currentUser.age >= 40))){
+      matchGroup.push(person);
+  }}
+  // }
+  // else if (currentUser.relationship !== person.relationship){
+  //  matchGroup.push(person)
+  // }
+  // else if (currentUser.relationship !== person.relationship){
+  //  matchGroup.push(person)
   })
   return matchGroup
 }
+
 // Submit form
   $(document).ready(function() {
 
     var allProfiles = [];
     var person = {};
-    allProfiles.push(new Profile("Hulk", "Hogan", "111-1111", 34, "tall", "male", "female", "older", "tall", "casual", ["a"]))
-    // allProfiles.push(new Profile("Talia", "Shire", "111-1111", 34, "tall", "male", "female", "older", "tall", "casual", "a"))
-// console.log(allProfiles);
+    allProfiles.push(new Profile("man1", "manLast1", "#", 34, "short", "male", "female", "older", "short", "casual", ["a"]));
+    allProfiles.push(new Profile("man2", "manLast2", "#", 34, "short", "male", "female", "older", "short", "marriage", ["a"]));
+    allProfiles.push(new Profile("man3", "manLast3", "#", 34, "short", "male", "female", "older", "short", "casual", ["a"]));
+    allProfiles.push(new Profile("man4", "manLast4", "#", 34, "short", "male", "female", "older", "short", "marriage", ["a"]));
+    allProfiles.push(new Profile("man5", "manLast5", "#", 34, "short", "male", "male", "older", "short", "casual", ["a"]));
+    allProfiles.push(new Profile("man6", "manLast6", "#", 60, "tall", "male", "female", "younger", "tall", "marraige", ["a"]));
+    allProfiles.push(new Profile("man7", "manLast7", "#", 77, "tall", "male", "female", "younger", "tall", "casual", ["a"]));
+    allProfiles.push(new Profile("man8", "manLast8", "#", 40, "tall", "male", "female", "younger", "tall", "marriage", ["a"]));
+    allProfiles.push(new Profile("man9", "manLast9", "#", 34, "tall", "male", "female", "younger", "tall", "casual", ["a"]));
+    allProfiles.push(new Profile("man10", "manLast10", "#", 34, "tall", "male", "male", "younger", "tall", "marriage", ["a"]));
+    allProfiles.push(new Profile("female1", "femaleLast1", "#", 34, "tall", "female", "male", "older", "tall", "casual", ["a"]));
+    allProfiles.push(new Profile("female2", "femaleLast2", "#", 55, "tall", "female", "male", "older", "tall", "casual", ["a"]));
+    allProfiles.push(new Profile("female3", "femaleLast3", "#", 42, "tall", "female", "male", "older", "tall", "marriage", ["a"]));
+    allProfiles.push(new Profile("female4", "femaleLast4", "#", 44, "tall", "female", "female", "older", "tall", "casual", ["a"]));
+    allProfiles.push(new Profile("female5", "femaleLast5", "#", 34, "tall", "female", "female", "older", "tall", "casual", ["a"]));
 
   $("#generalForm").submit(function(event){
     event.preventDefault();
     // $("#generalForm").hide();
     $("#personalityForm").show();
 
-    // console.log(allProfiles);
     person = new Profile();
-    console.log(person);
     allProfiles.push(person);
-    console.log(allProfiles);
-    // console.log(allProfiles);
-    console.log(allProfiles);
-
-    // var allProfilesOutput = allProfiles.join(",");
-    $("#personList").text(allProfiles);
 
 
   }); //generalForm close
@@ -96,7 +109,12 @@ matchGroup.forEach(function(person, index){
       var personalityQuestions = $(this).val();
       person.personality.push(personalityQuestions);
       }); //personalityForm close
-    // console.log(matches(allProfiles, person))
-    // console.log(allProfiles);
+      var yourMatches = matches(allProfiles, person)
+      console.log(yourMatches);
+      // console.log(yourMatches);
+      // $("#personList").append("<div class='card'><span class='personListSingle'>" + person.firstName + "</span></div>");
+      // console.log(allProfiles);
+
+
     }); //Form Closing
 }); //Document Closing
