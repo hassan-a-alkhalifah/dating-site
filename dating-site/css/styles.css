@@ -15,6 +15,7 @@
  */
  #header {
    height: 190px;
+   width: 100%;
    background-image: url("../img/retro-header.png");
    background-position: center;
  }
@@ -22,4 +23,7 @@
    height: 190px;
    background-image: url("../img/retro-footer.png");
    background-position: center;
+   position: absolute;
+   bottom: 0;
+   width: 100%
  }
