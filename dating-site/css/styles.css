@@ -179,7 +179,7 @@
  #submitGeneralFormButton {
    display: block;
    margin: 20px auto;
-
+   background-color: #651ccc;
  }
  .questionnaire-page {
    display: none;
