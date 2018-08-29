@@ -1,5 +1,5 @@
 // ui logic
-function Profile(firstName, lastName, phone, age, height, gender, orientation, agePref, heightPref, relationship, personality) {
+function Profile(firstName, lastName, phone, age, height, gender, orientation, agePref, heightPref, relationship, personality, bio, image) {
   this.firstName = generalForm.firstName.value;
   this.lastName = generalForm.lastName.value;
   this.phone = generalForm.phone.value;
@@ -10,6 +10,8 @@ function Profile(firstName, lastName, phone, age, height, gender, orientation, a
   this.agePref = generalForm.agePref.value;
   this.heightPref = generalForm.heightPreference.value;
   this.relationship = generalForm.relationshipGoal.value;
+  this.bio = generalForm.userBio.value;
+  this.image = generalForm.userImage.value;
   this.personality = [];
   if (this.firstName == "") {
   this.firstName = firstName;
@@ -22,6 +24,8 @@ function Profile(firstName, lastName, phone, age, height, gender, orientation, a
   this.agePref = agePref;
   this.heightPref = heightPref;
   this.relationship = relationship;
+  this.bio = bio
+  this.image = image
   this.personality = personality;
 }
 }
