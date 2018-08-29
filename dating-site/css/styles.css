@@ -152,6 +152,12 @@
  .about-you-container div:nth-child(6) {
    padding-left: 24px;
  }
+ .about-you-container div:nth-child(7){
+   padding-left: 50px;
+ }
+ .about-you-container div:nth-child(8){
+   padding-left: 50px;
+ }
  .about-you-container select {
    width: 260px;
  }
