@@ -15,6 +15,7 @@
     <div class="landing-page">
       <div class="main-image-container">
         <h2>WE <strong>HOPE</strong> YOU HAVE THE TIME OF YOUR <span>LIFE</span>.</h2>
+        <button type="button" class="btn btn-outline-light">Try Now!</button>
         <div class="main-image"></div>
       </div>
       <div class="testimonial-1">
@@ -22,7 +23,11 @@
         <img src="img/karen-quote.png" alt="female">
       </div>
       <div class="btn-to-questionaire">
+        <div id="application-description">
+          <p>Welcome to Totally Tubular! The official dating website of the 1980s.</p>
 
+          <p>At TT, we use the most advanced data analytics to match you with the man or woman of your dreams! Make a date with fate <span>HERE!</span></p>
+        </div>
       </div>
       <div class="testimonial-2">
         <img src="img/billy-b.png" alt="female">
@@ -34,7 +39,7 @@
       <div class="demographics-wrapper">
         <form id="generalForm" name="generalForm">
           <div class="about-you-container">
-            <h2>Tell us about you</h2>
+            <h2>About You</h2>
             <div class="form-group">
               <label>First name:</label>
               <input type="text" name="firstName" required>
@@ -59,10 +64,18 @@
                 <option value="tall">Over 5'9"</option>
               </select>
             </div>
+            <div class="form-group">
+              <label>Bio:</label>
+              <textarea name="userBio" rows="4" cols="30" required></textarea>
+            </div>
+            <div class="form-group">
+              <label>Upload image:</label>
+              <input type="file" name="userImage" accept="image/*">
+            </div>
           </div>
 
           <div class="demographics-container">
-            <h2>Demographics</h2>
+            <h2>Partner Preferences</h2>
             <div>
               Gender:
               <select name="gender">
@@ -106,48 +119,46 @@
       </div>
     </div>
 
-    <div class="questionnaire-page">
-      <form id="personalityForm">
-        <h2>Personality Section</h2>
-        <p>Question 1</p>
-        <select class="form-control" name="personality" id="question1">
-          <option value="a">Coffee</option>
-          <option value="b">Tea</option>
-          <option value="c">Kombucha</option>
-          <option value="d">Water</option>
-        </select><br>
-        <p>Question 2</p>
-        <select class="form-control" name="personality" id="question2">
-          <option value="a">Coffee</option>
-          <option value="b">Tea</option>
-          <option value="c">Kombucha</option>
-          <option value="d">Water</option>
-        </select><br>
-        <p>Question 3</p>
-        <select class="form-control" name="personality" id="question3">
-          <option value="a">Coffee</option>
-          <option value="b">Tea</option>
-          <option value="c">Kombucha</option>
-          <option value="d">Water</option>
-        </select><br>
-        <p>Question 4</p>
-        <select class="form-control" name="personality" id="question4">
-          <option value="a">Coffee</option>
-          <option value="b">Tea</option>
-          <option value="c">Kombucha</option>
-          <option value="d">Water</option>
-        </select><br>
-        <p>Question 5</p>
-        <select class="form-control" name="personality" id="question5">
-          <option value="a">Coffee</option>
-          <option value="b">Tea</option>
-          <option value="c">Kombucha</option>
-          <option value="d">Water</option>
-        </select>
-        <br>
-        <button id="findMatchButton" type="submit" class="btn btn-warning" name="button">Find Your Perfect Love Match!</button>
-      </form>
-    </div>
+    <form id="personalityForm">
+      <h2>Personality Section</h2>
+      <p>Question 1</p>
+      <select class="form-control" name="personality" id="question1">
+        <option value="a">Coffee</option>
+        <option value="b">Tea</option>
+        <option value="c">Kombucha</option>
+        <option value="d">Water</option>
+      </select><br>
+      <p>Question 2</p>
+      <select class="form-control" name="personality" id="question2">
+        <option value="a">Coffee</option>
+        <option value="b">Tea</option>
+        <option value="c">Kombucha</option>
+        <option value="d">Water</option>
+      </select><br>
+      <p>Question 3</p>
+      <select class="form-control" name="personality" id="question3">
+        <option value="a">Coffee</option>
+        <option value="b">Tea</option>
+        <option value="c">Kombucha</option>
+        <option value="d">Water</option>
+      </select><br>
+      <p>Question 4</p>
+      <select class="form-control" name="personality" id="question4">
+        <option value="a">Coffee</option>
+        <option value="b">Tea</option>
+        <option value="c">Kombucha</option>
+        <option value="d">Water</option>
+      </select><br>
+      <p>Question 5</p>
+      <select class="form-control" name="personality" id="question5">
+        <option value="a">Coffee</option>
+        <option value="b">Tea</option>
+        <option value="c">Kombucha</option>
+        <option value="d">Water</option>
+      </select>
+      <br>
+      <button id="findMatchButton" type="submit" class="btn btn-warning" name="button">Find Your Perfect Love Match!</button>
+    </form>
 
     <div id="matches">
       <h1>Here are your amazing matches:</h1>
