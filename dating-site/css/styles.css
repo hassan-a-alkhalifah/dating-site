@@ -26,11 +26,12 @@
    background-position: center;
  }
  .landing-page {
-   display: none;
+   /* display: none; */
  }
- .main-image {
+ .main-image-container {
    height: 550px;
    opacity: 0.5;
+   position: relative;
    background-position: 0px 0px;
    background-image: url("../img/80s-couple.jpg");
    background-repeat: no-repeat;
@@ -40,28 +41,61 @@
    color: #EEE;
    padding-top: 200px;
  }
- .main-image h2 {
-   text-shadow: 0 0 20px #000;
+ .main-image-container h2 {
+   z-index: 2;
+   text-shadow: 0 0 10px #000;
+   text-align: center;
+   font-size: 38px;
+   font-family: Lato, sans-serif;
+   font-weight: 200;
+ }
+ .main-image-container strong {
+   font-weight: 600;
+   font-size: 45px;
+ }
+ .main-image-container span {
+   line-height: 85.6px;
+   text-transform: lowercase;
+   font: 400 83px/1.3 'Arizonia', Helvetica, sans-serif;
+ }
+ #generalForm {
+   padding: 60px 0;
  }
  .testimonial-1 {
-   height: 240px;
+   height: 300px;
    width: 100%;
    background-color: #F1D9FF;
+ }
+ .testimonial-1 img:nth-child(1){
+   float: left;
+   display: inline-block;
+ }
+ .testimonial-1 img:nth-child(2){
+   float: right;
+   display: inline-block;
+ }
+ .testimonial-2 img:nth-child(1){
+   float: right;
+   display: inline-block;
+   height: 292px;
+ }
+ .testimonial-2 img:nth-child(2){
+   float: left;
+   display: inline-block;
  }
  .btn-to-questionaire {
    height: 240px;
    width: 100%;
-   background-image: url("../img/wallpaper.jpg");
+   background-image: url("../img/80s-wallpaper.png");
  }
  .testimonial-2 {
-   height: 240px;
+   height: 300px;
    width: 100%;
    background-color: #DDFFF7;
  }
  .demographics-page {
-   padding: 0 100px;
-   background-image: url("../img/wallpaper.jpg");
-   /* display: none; */
+   background-image: url("../img/80s-wallpaper-lg.png");
+   display: none;
  }
  .demographics-wrapper {
    margin: 0 auto;
@@ -71,9 +105,6 @@
  .about-you-container {
    margin-bottom: 30px;
    padding: 20px 0;
- }
- .demographics-container {
-   padding: 20px 0 20px 75px;
  }
  #generalForm h2 {
    text-align: center;
@@ -102,16 +133,22 @@
    width: 260px;
  }
  .about-you-container .form-group, .about-you-container div:nth-child(6){
-   margin: 0 165px;
+   margin: 0 0 0 240px;
+ }
+ .demographics-container div{
+   margin: 0 0 0 150px;
  }
  .demographics-container div:nth-child(2){
-   padding-left: 108px;
+   padding-left: 109px;
  }
  .demographics-container div:nth-child(3){
-   padding-left: 30px;
+   padding-left: 36px;
+ }
+ .demographics-container div:nth-child(4){
+   padding-left: 3px;
  }
  .demographics-container div:nth-child(5){
-   padding-left: 30px;
+   padding-left: 32px;
  }
  .demographics-container div:nth-child(6){
    padding-left: 36px;
@@ -122,5 +159,5 @@
 
  }
  .questionnaire-page {
-   /* display: none; */
+   display: none;
  }
