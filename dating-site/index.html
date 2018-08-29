@@ -2,6 +2,8 @@
 <html>
   <head>
     <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chango" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
@@ -37,9 +39,10 @@
 
     <div class="demographics-page">
       <div class="demographics-wrapper">
+        <!-- <div id="wall-paper-border-left" class="col-md-2 wall-paper-border"></div> -->
         <form id="generalForm" name="generalForm">
           <div class="about-you-container">
-            <h2>About You</h2>
+            <h2 class="victory">About You</h2>
             <div class="form-group">
               <label>First name:</label>
               <input type="text" name="firstName" required>
@@ -118,88 +121,154 @@
         </form>
       </div>
     </div>
-
+    <div class="personality-container">
       <form id="personalityForm">
         <h2>Personality Section</h2>
-        <p>Question 1</p>
-        <select class="form-control" name="personality" id="question1">
-          <option value="a">Coffee</option>
-          <option value="b">Tea</option>
-          <option value="c">Kombucha</option>
-          <option value="d">Water</option>
-        </select><br>
-        <p>Question 2</p>
-        <select class="form-control" name="personality" id="question2">
-          <option value="a">Coffee</option>
-          <option value="b">Tea</option>
-          <option value="c">Kombucha</option>
-          <option value="d">Water</option>
-        </select><br>
-        <p>Question 3</p>
-        <select class="form-control" name="personality" id="question3">
-          <option value="a">Coffee</option>
-          <option value="b">Tea</option>
-          <option value="c">Kombucha</option>
-          <option value="d">Water</option>
-        </select><br>
-        <p>Question 4</p>
-        <select class="form-control" name="personality" id="question4">
-          <option value="a">Coffee</option>
-          <option value="b">Tea</option>
-          <option value="c">Kombucha</option>
-          <option value="d">Water</option>
-        </select><br>
-        <p>Question 5</p>
-        <select class="form-control" name="personality" id="question5">
-          <option value="a">Coffee</option>
-          <option value="b">Tea</option>
-          <option value="c">Kombucha</option>
-          <option value="d">Water</option>
-        </select>
-        <br>
+        <div class="questions-container">
+          <div class="answers">
+            <h4>Who are you at the house party?</h4>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionOne" value="a" checked>
+                Person in the backyard doing keg stands.
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionOne" value="b">
+                The host.
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionOne" value="c">
+                I don't do parties. In the basement playing Dungeons & Dragons.
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionOne" value="d">
+                The one taking care of my drunk friend, Nancy.
+              </label>
+            </div>
+          </div>
+
+          <div class="answers">
+            <h4>What's your go-to dance?</h4>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionTwo" value="c" checked>
+                Dancing? No.
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionTwo" value="b">
+                Dancing La Macarena.
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionTwo" value="a">
+                Doing The Worm.
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionTwo" value="d">
+                The Butt.
+              </label>
+            </div>
+          </div>
+
+          <div class="answers">
+            <h4>How did you spend your lunch break in high school?</h4>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionThree" value="b" checked>
+                Running the Homecoming committee.
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionThree" value="c">
+                In the computer lab.
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionThree" value="d">
+                Hopping around to each of my friend group's lunch tables.
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionThree" value="a">
+                Behind the bleachers smokin' a cig.
+              </label>
+            </div>
+          </div>
+
+          <div class="answers">
+            <h4>What's your favorite 80's quote?</h4>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionFour" value="d" checked>
+                "That's what's great about the outdoors, ya know, it's one giant toilet." - Jeff Goldbloom in "The Big Chill"
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionFour" value="a">
+                "Say hello to my little friend!" - Al Pacino in "Scarface"
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionFour" value="b">
+                "Just say no." - Nancy Reagon in "The White House"
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionFour" value="c">
+                "I know you are but what am I?" - Paul Reubens in "Pee-wee's Big Adventure"
+              </label>
+            </div>
+          </div>
+
+          <div class="answers">
+            <h4>Who would be your best friend?</h4>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionFive" value="c" checked>
+                Steve Urkel from "Family Matters"
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionFive" value="d">
+                Claire from "Breakfast Club"
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionFive" value="a">
+                Jeff Spicoli from "Fast Times at Ridgemont High"
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input class="questions" type="radio" name="questionFive" value="b">
+                Duckie Dale from "Pretty in Pink"
+              </label>
+            </div>
+          </div>
+        </div>
         <button id="findMatchButton" type="submit" class="btn btn-warning" name="button">Find Your Perfect Love Match!</button>
       </form>
+    </div>
 
-    <form id="personalityForm">
-      <h2>Personality Section</h2>
-      <p>Question 1</p>
-      <select class="form-control" name="personality" id="question1">
-        <option value="a">Coffee</option>
-        <option value="b">Tea</option>
-        <option value="c">Kombucha</option>
-        <option value="d">Water</option>
-      </select><br>
-      <p>Question 2</p>
-      <select class="form-control" name="personality" id="question2">
-        <option value="a">Coffee</option>
-        <option value="b">Tea</option>
-        <option value="c">Kombucha</option>
-        <option value="d">Water</option>
-      </select><br>
-      <p>Question 3</p>
-      <select class="form-control" name="personality" id="question3">
-        <option value="a">Coffee</option>
-        <option value="b">Tea</option>
-        <option value="c">Kombucha</option>
-        <option value="d">Water</option>
-      </select><br>
-      <p>Question 4</p>
-      <select class="form-control" name="personality" id="question4">
-        <option value="a">Coffee</option>
-        <option value="b">Tea</option>
-        <option value="c">Kombucha</option>
-        <option value="d">Water</option>
-      </select><br>
-      <p>Question 5</p>
-      <select class="form-control" name="personality" id="question5">
-        <option value="a">Coffee</option>
-        <option value="b">Tea</option>
-        <option value="c">Kombucha</option>
-        <option value="d">Water</option>
-      </select>
-      <br>
-      <button id="findMatchButton" type="submit" class="btn btn-warning" name="button">Find Your Perfect Love Match!</button>
-    </form>
 
     <div id="matches">
       <h1>Here are your amazing matches:</h1>

@@ -59,7 +59,7 @@ function matches(array, user) {
   var matchGroup = []
   var currentUser = user;
 array.forEach(function(person, index){
-  if ((currentUser.orientation == person.gender && person.orientation == currentUser.gender) && (currentUser.relationship == person.relationship) && (currentUser.height == person.heightPref && person.height == currentUser.heightPref) && (currentUser.personalityType() == person.personalityType())){
+  if ((currentUser.orientation == person.gender && person.orientation == currentUser.gender) && (currentUser.relationship == person.relationship) && (currentUser.height == person.heightPref && person.height == currentUser.heightPref)){
     if(((currentUser.agePref == "younger" && person.age < 40 )|| (currentUser.agePref == "older" && person.age >= 40)) && ((person.agePref == "younger" && currentUser.age < 40 )|| (person.agePref == "older" && currentUser.age >= 40))){
       matchGroup.push(person);
   }}
@@ -81,21 +81,14 @@ array.forEach(function(person, index){
 
     var allProfiles = [];
     var person = {};
-    allProfiles.push(new Profile("man1", "manLast1", "#", 34, "short", "male", "female", "younger", "short", "casual", ["a"], "I like you", "img/man1.jpg"));
-    // allProfiles.push(new Profile("man2", "manLast2", "#", 34, "short", "male", "female", "older", "short", "marriage", ["a"]));
-    // allProfiles.push(new Profile("man3", "manLast3", "#", 34, "short", "male", "female", "older", "short", "casual", ["a"]));
-    // allProfiles.push(new Profile("man4", "manLast4", "#", 34, "tall", "male", "female", "older", "short", "marriage", ["a"]));
-    // allProfiles.push(new Profile("man5", "manLast5", "#", 34, "short", "male", "male", "older", "short", "casual", ["a"]));
-    // allProfiles.push(new Profile("man6", "manLast6", "#", 60, "tall", "male", "female", "younger", "tall", "marraige", ["a"]));
-    // allProfiles.push(new Profile("man7", "manLast7", "#", 77, "tall", "male", "female", "younger", "tall", "casual", ["a"]));
-    // allProfiles.push(new Profile("man8", "manLast8", "#", 40, "tall", "male", "female", "younger", "tall", "marriage", ["a"]));
-    // allProfiles.push(new Profile("man9", "manLast9", "#", 34, "tall", "male", "female", "younger", "tall", "casual", ["a"]));
-    // allProfiles.push(new Profile("man10", "manLast10", "#", 34, "tall", "male", "male", "younger", "tall", "marriage", ["a"]));
+
+    allProfiles.push(new Profile("man1", "manLast1", "#", 34, "short", "male", "female", "younger", "tall", "casual", ["a"], "Interest", "img/man1.jpg"));
+
+
+        allProfiles.push(new Profile("man2", "manLast1", "#", 34, "short", "male", "female", "younger", "short", "casual", ["a"], "I like you", "img/man1.jpg"));
+
     allProfiles.push(new Profile("female1", "femaleLast1", "#", 34, "tall", "female", "male", "younger", "tall", "casual", ["a"], "I like you", "img"));
-    // allProfiles.push(new Profile("female2", "femaleLast2", "#", 55, "short", "female", "male", "older", "tall", "casual", ["a"]));
-    // allProfiles.push(new Profile("female3", "femaleLast3", "#", 42, "tall", "female", "male", "older", "short", "marriage", ["a"]));
-    // allProfiles.push(new Profile("female4", "femaleLast4", "#", 44, "tall", "female", "female", "older", "tall", "casual", ["a"]));
-    // allProfiles.push(new Profile("female5", "femaleLast5", "#", 34, "tall", "female", "female", "older", "tall", "casual", ["a"]));
+
 console.log(allProfiles[0]);
   $("#generalForm").submit(function(event){
     event.preventDefault();
@@ -110,25 +103,33 @@ console.log(allProfiles[0]);
     event.preventDefault();
     // $("#personalityForm").hide();
     $("#matches").show();
+    $("#personList").empty()
     person.personality.splice(0, person.personality.length);
-    $('select[name="personality"] option:selected').each(function(){
+    $('input:radio[class = questions]:checked').each(function(){
       var personalityQuestions = $(this).val();
       person.personality.push(personalityQuestions);
       }); //personalityForm close
       var yourMatches = matches(allProfiles, person);
       console.log(yourMatches);
-      for (var i = 0 ; i <= allProfiles.length; i++){
-        $("#personList").append("<img class='match' src=" + allProfiles[0].image + ">");
-
+      var match = {}
+      for (var i = 0 ; i < yourMatches.length; i++){
+        match = yourMatches[i];
+        $("#personList").append( '<div class="card" style="width: 18rem;">' +
+                '<img class="card-img-top match" src="img/man1.jpg" alt="Card image cap">' +
+                '<div class="card-body">' +
+                  '<h5 class="card-title"> Name:' + match.firstName + '</h5>' +
+                  '<p class="card-text">Bio:<span class="bioCard"></span></p>' +
+                '</div>' +
+                '<ul class="list-group list-group-flush">' +
+                  '<li class="list-group-item">Age: <span class="ageCard"></span></li>' +
+                  '<li class="list-group-item">Height: <span class="heightCard"></span></li>' +
+                  '<li class="list-group-item">Relationship Goal: <span class="relationshipGoalCard"></span></li>' +
+                  '<li class="list-group-item">Number: <span class="numberCard"></span></li>' +
+                '</ul>' +
+              '</div>');
+              console.log(yourMatches[i]);
     $(".match").last().click(function() {
-      $("#show-contact").show();
-      $("#show-contact h2").text(newContact.fullName());
-      $(".first-name").text(newContact.firstName);
-      $(".last-name").text(newContact.lastName);
-      $("ul#addresses").text("");
-      newContact.addresses.forEach(function(address) {
-        $("ul#addresses").append("<li>" + address.fullAddress() + "</li>");
-      });
+
     });
 
     }
