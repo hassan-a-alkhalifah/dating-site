@@ -81,7 +81,7 @@ array.forEach(function(person, index){
 
     var allProfiles = [];
     var person = {};
-    allProfiles.push(new Profile("man1", "manLast1", "#", 34, "short", "male", "female", "younger", "short", "casual", ["a"], "I like you", "img"));
+    allProfiles.push(new Profile("man1", "manLast1", "#", 34, "short", "male", "female", "younger", "short", "casual", ["a"], "I like you", "img/man1.jpg"));
     // allProfiles.push(new Profile("man2", "manLast2", "#", 34, "short", "male", "female", "older", "short", "marriage", ["a"]));
     // allProfiles.push(new Profile("man3", "manLast3", "#", 34, "short", "male", "female", "older", "short", "casual", ["a"]));
     // allProfiles.push(new Profile("man4", "manLast4", "#", 34, "tall", "male", "female", "older", "short", "marriage", ["a"]));
@@ -117,7 +117,20 @@ console.log(allProfiles[0]);
       }); //personalityForm close
       var yourMatches = matches(allProfiles, person);
       console.log(yourMatches);
-      console.log(person);
+      for (var i = 0 ; i <= allProfiles.length; i++){
+        $("#personList").append("<img class='match' src=" + allProfiles[0].image + ">");
+
+    $(".match").last().click(function() {
+      $("#show-contact").show();
+      $("#show-contact h2").text(newContact.fullName());
+      $(".first-name").text(newContact.firstName);
+      $(".last-name").text(newContact.lastName);
+      $("ul#addresses").text("");
+      newContact.addresses.forEach(function(address) {
+        $("ul#addresses").append("<li>" + address.fullAddress() + "</li>");
+      });
+    });
+
+    }
     }); //Form Closing
-    console.log(person);
 }); //Document Closing
