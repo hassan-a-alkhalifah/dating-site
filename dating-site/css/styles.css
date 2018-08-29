@@ -1,5 +1,10 @@
+h2 {
+  position: relative;
+  font-family: 'Chango', cursive;
+  font-size: 30px;
+}
 #personalityForm, #matches {
-  display: none;
+  /* display: none; */
 }
 /* .header-purple-gradient {
   width: 100%;
@@ -70,6 +75,7 @@
    height: 300px;
    width: 100%;
    background-color: #F1D9FF;
+   padding: 0 160px;
  }
  .testimonial-1 img:nth-child(1){
    float: left;
@@ -77,15 +83,6 @@
  }
  .testimonial-1 img:nth-child(2){
    float: right;
-   display: inline-block;
- }
- .testimonial-2 img:nth-child(1){
-   float: right;
-   display: inline-block;
-   height: 292px;
- }
- .testimonial-2 img:nth-child(2){
-   float: left;
    display: inline-block;
  }
  .btn-to-questionaire {
@@ -115,15 +112,25 @@
    height: 300px;
    width: 100%;
    background-color: #DDFFF7;
+   padding: 0 160px;
+ }
+ .testimonial-2 img:nth-child(1){
+   float: right;
+   display: inline-block;
+   height: 292px;
+ }
+ .testimonial-2 img:nth-child(2){
+   float: left;
+   display: inline-block;
  }
  .demographics-page {
    background-image: url("../img/80s-wallpaper-lg.png");
    /* display: none; */
  }
- .demographics-wrapper {
+ .demographics-wrapper, #personalityForm {
    margin: 0 auto;
    background-color: white;
-   width: 900px;
+   width: 1800px;
  }
  .about-you-container {
    margin-bottom: 30px;
@@ -162,31 +169,106 @@
    width: 260px;
  }
  .about-you-container .form-group, .about-you-container div:nth-child(6){
-   margin: 0 0 0 240px;
+   margin: 0 0 0 680px;
  }
  .demographics-container div{
-   margin: 0 0 0 150px;
+   margin: 0 0 0 600px;
  }
  .demographics-container div:nth-child(2){
-   padding-left: 109px;
+   padding-left: 108px;
  }
  .demographics-container div:nth-child(3){
-   padding-left: 36px;
- }
- .demographics-container div:nth-child(4){
-   padding-left: 3px;
+   padding-left: 30px;
  }
  .demographics-container div:nth-child(5){
-   padding-left: 32px;
+   padding-left: 30px;
  }
  .demographics-container div:nth-child(6){
    padding-left: 36px;
  }
- #submitGeneralFormButton {
+ #submitGeneralFormButton, #findMatchButton {
    display: block;
+   color: #FFF;
    margin: 20px auto;
    background-color: #651ccc;
+   border: none;
+ }
+ #submitGeneralFormButton:hover, #findMatchButton:hover {
+   background-color: #651ccc;
+ }
+ .personality-container {
+   background-image: url("../img/80s-wallpaper-lg.png");
+ }
+ #personalityForm {
+   padding: 80px;
+ }
+ #personalityForm h2 {
+   text-align: center;
+   margin-bottom: 60px;
+ }
+ .answers {
+   margin-bottom: 60px;
  }
  .questionnaire-page {
-   display: none;
+   /* display: none; */
+ }
+
+ /*--- MEDIA QUERIES ---*/
+ @media only screen and (max-width: 1240px) {
+   .testimonial-1, .testimonial-2 {
+     height: 250px;
+     padding-top: 20px;
+   }
+   .testimonial-1 img, .testimonial-2 img {
+     width: 300px;
+   }
+   .testimonial-2 img:nth-child(1) {
+     height: 200px;
+   }
+ }
+ @media only screen and (max-width: 1990px) {
+   .demographics-wrapper, #personalityForm {
+     margin: 0 auto;
+     background-color: white;
+     width: 1400px;
+   }
+   .about-you-container .form-group, .about-you-container div:nth-child(6){
+     margin: 0 0 0 480px;
+   }
+   .demographics-container div{
+     margin: 0 0 0 399px;
+   }
+ }
+ @media only screen and (max-width: 1600px) {
+   .demographics-wrapper, #personalityForm {
+     margin: 0 auto;
+     background-color: white;
+     width: 1000px;
+   }
+   .about-you-container .form-group, .about-you-container div:nth-child(6){
+     margin: 0 0 0 280px;
+   }
+   .demographics-container div{
+     margin: 0 0 0 199px;
+   }
+ }
+ @media only screen and (max-width: 1190px) {
+   .demographics-wrapper, #personalityForm {
+     margin: 0 auto;
+     background-color: white;
+     width: 600px;
+   }
+   .about-you-container .form-group, .about-you-container div:nth-child(6){
+     margin: 0 0 0 80px;
+   }
+   .demographics-container div{
+     margin: 0 0 0 9px;
+   }
+ }
+ @media only screen and (max-width: 800px) {
+   .demographics-wrapper, #personalityForm {
+     margin: 0 auto;
+     background-color: white;
+     width: 200px;
+   }
  }
