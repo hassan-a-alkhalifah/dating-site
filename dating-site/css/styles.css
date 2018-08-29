@@ -1,4 +1,4 @@
-#personalityForm, #matches {
+#personalityForm, #matches, .landingpage {
   display: none;
 }
 /* .header-purple-gradient {
@@ -25,9 +25,7 @@
    background-image: url("../img/retro-footer.png");
    background-position: center;
  }
- .landing-page {
-   /* display: none; */
- }
+
  .main-image-container {
    height: 550px;
    opacity: 0.5;
@@ -95,7 +93,7 @@
  }
  .demographics-page {
    background-image: url("../img/80s-wallpaper-lg.png");
-   display: none;
+   /* display: none; */
  }
  .demographics-wrapper {
    margin: 0 auto;
@@ -157,7 +155,4 @@
    display: block;
    margin: 20px auto;
 
- }
- .questionnaire-page {
-   display: none;
  }
