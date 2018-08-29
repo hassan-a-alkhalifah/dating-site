@@ -1,23 +1,13 @@
+#personalityForm, #matches, .demographics-page {
+  display: none;
+}
+
 h2 {
   position: relative;
   font-family: 'Chango', cursive;
   font-size: 30px;
 }
-#personalityForm, #matches {
-  /* display: none; */
-}
-/* .header-purple-gradient {
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(#6A4196, #C86DD7);
-}
-.header-retro-black {
-  width: 100%;
-  height: 90px;
-  background-color: #000;
-  border-top: 3px solid #FFE6FB;
 
- */
  #header {
    height: 190px;
    width: 100%;
@@ -30,9 +20,7 @@ h2 {
    background-image: url("../img/retro-footer.png");
    background-position: center;
  }
- .landing-page {
-   /* display: none; */
- }
+
  .main-image-container {
    height: 550px;
    opacity: 0.5;
@@ -193,6 +181,7 @@ h2 {
    background-color: #651ccc;
    border: none;
  }
+
  #submitGeneralFormButton:hover, #findMatchButton:hover {
    background-color: #651ccc;
  }
@@ -209,6 +198,7 @@ h2 {
  .answers {
    margin-bottom: 60px;
  }
+
  .questionnaire-page {
    /* display: none; */
  }

@@ -17,7 +17,7 @@
     <div class="landing-page">
       <div class="main-image-container">
         <h2>WE <strong>HOPE</strong> YOU HAVE THE TIME OF YOUR <span>LIFE</span>.</h2>
-        <button type="button" class="btn btn-outline-light">Try Now!</button>
+        <button id="landingPageButton" type="button" class="btn btn-outline-light">Try Now!</button>
         <div class="main-image"></div>
       </div>
       <div class="testimonial-1">
@@ -28,7 +28,7 @@
         <div id="application-description">
           <p>Welcome to Totally Tubular! The official dating website of the 1980s.</p>
 
-          <p>At TT, we use the most advanced data analytics to match you with the man or woman of your dreams! Make a date with fate <span>HERE!</span></p>
+          <p>At TT, we use the most advanced data analytics to match you with the man or woman of your dreams! Make a date with fate <span id="dateWithFate">HERE!</span></p>
         </div>
       </div>
       <div class="testimonial-2">
@@ -62,9 +62,9 @@
             <div>
               <label>Height:</label>
               <select name="height">
-                <option value="short">Under 5'5"</option>
-                <option value="medium">5'5" to 5'9"</option>
-                <option value="tall">Over 5'9"</option>
+                <option value="short">Under 5'8"</option>
+                <!-- <option value="medium">5'5" to 5'9"</option> -->
+                <option value="tall">Over 5'8"</option>
               </select>
             </div>
             <div class="form-group">
@@ -104,9 +104,9 @@
             <div>
               Height Preference:
               <select name="heightPreference">
-                <option value="short">Short (shorter than 5'5")</option>
-                <option value="medium">Medium (between 5'5" and 5'9")</option>
-                <option value="tall">Tall (5'9" or taller)</option>
+                <option value="short">Short (shorter than 5'8")</option>
+                <!-- <option value="medium">Medium (between 5'5" and 5'9")</option> -->
+                <option value="tall">Tall (5'8" or taller)</option>
               </select>
             </div>
             <div>
@@ -236,7 +236,6 @@
               </label>
             </div>
           </div>
-
           <div class="answers">
             <h4>Who would be your best friend?</h4>
             <div class="radio">
@@ -271,17 +270,12 @@
 
     <div id="matches">
       <h1>Here are your amazing matches:</h1>
-      <div class="row" id="personList"></div>
+      <div class="row" id="personList">
+
+      </div>
     </div>
 
     <div id="footer"></div>
 
   </body>
 </html>
-
-
-
-      <!-- <div class="card">
-        <p><span id="personList"></span> </p>
-      </div>
-    </div> -->
