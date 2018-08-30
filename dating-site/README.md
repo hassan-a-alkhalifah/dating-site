@@ -28,6 +28,6 @@ _Git, Atom, HTML, CSS, Bootstrap (4.0), Javascript, jQuery (3.3.7)_
 
 ### License
 
-*Free for non-commercial user.*
+*Free for non-commercial use.*
 
 Copyright (c) 2018 **_Tubular Technology Team (T3)_**
