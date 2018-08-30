@@ -173,14 +173,13 @@ h2 {
  .demographics-container div:nth-child(6){
    padding-left: 36px;
  }
- #submitGeneralFormButton, #findMatchButton {
+ #submitGeneralFormButton, #findMatchButton, #backToTop {
    display: block;
    color: #FFF;
    margin: 20px auto;
    background-color: #651ccc;
    border: none;
  }
-
  #submitGeneralFormButton:hover, #findMatchButton:hover {
    background-color: #651ccc;
  }
@@ -197,8 +196,23 @@ h2 {
  .answers {
    margin-bottom: 60px;
  }
-
-
+ #backToTop {
+   margin-top: 80px;
+ }
+ #bio {
+   position: absolute;
+   left: 0;
+   top: 0;
+ }
+ #bioPosition {
+   position: relative;
+   margin-left: 110px;
+   margin-top: 12px;
+ }
+ #bioPosition textarea {
+   border-radius: 5px;
+   width: 260px;
+ }
  #matches {
    background-image: url("../img/80s-wallpaper-lg.png");
  }
@@ -206,10 +220,11 @@ h2 {
     margin: 0 auto;
     background-color: white;
     width: 1000px;
-    padding: 0 0 250px 0;
+    padding: 65px 0 65px 0;
 }
 .matches-container h2 {
   text-align: center;
+  margin-bottom: 60px;
 }
 #personList {
   margin-right: 0;
@@ -228,6 +243,9 @@ h2 {
    .testimonial-2 img:nth-child(1) {
      height: 200px;
    }
+   #bioPosition {
+     margin-left: 310px;
+   }
  }
  @media only screen and (max-width: 1990px) {
    .demographics-wrapper, #personalityForm {
@@ -240,6 +258,9 @@ h2 {
    }
    .demographics-container div{
      margin: 0 0 0 399px;
+   }
+   #bioPosition {
+     margin-left: 510px;
    }
  }
  @media only screen and (max-width: 1600px) {
@@ -254,6 +275,9 @@ h2 {
    .demographics-container div{
      margin: 0 0 0 199px;
    }
+   #bioPosition {
+     margin-left: 310px;
+   }
  }
  @media only screen and (max-width: 1190px) {
    .demographics-wrapper, #personalityForm {
@@ -266,6 +290,9 @@ h2 {
    }
    .demographics-container div{
      margin: 0 0 0 9px;
+   }
+   #bioPosition {
+     margin-left: 110px;
    }
  }
  @media only screen and (max-width: 800px) {

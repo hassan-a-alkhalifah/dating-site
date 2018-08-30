@@ -178,4 +178,11 @@ console.log(allProfiles);
 
     }
     }); //Form Closing
+
+    $("#backToTop").click(function(){
+      $("#matches").hide();
+      $(".landing-page").show();
+      $("input").val("");
+      $("textarea").val("");
+    });
 }); //Document Closing
