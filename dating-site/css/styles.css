@@ -113,9 +113,8 @@ h2 {
  }
  .demographics-page {
    background-image: url("../img/80s-wallpaper-lg.png");
-   /* display: none; */
  }
- .demographics-wrapper, #personalityForm {
+ .demographics-wrapper, #personalityForm, {
    margin: 0 auto;
    background-color: white;
    width: 1800px;
@@ -199,9 +198,23 @@ h2 {
    margin-bottom: 60px;
  }
 
- .questionnaire-page {
-   /* display: none; */
+
+ #matches {
+   background-image: url("../img/80s-wallpaper-lg.png");
  }
+ .matches-container {
+    margin: 0 auto;
+    background-color: white;
+    width: 1000px;
+    padding: 0 0 250px 0;
+}
+.matches-container h2 {
+  text-align: center;
+}
+#personList {
+  margin-right: 0;
+  margin-left: 0;
+}
 
  /*--- MEDIA QUERIES ---*/
  @media only screen and (max-width: 1240px) {
