@@ -39,7 +39,6 @@
 
     <div class="demographics-page">
       <div class="demographics-wrapper">
-        <!-- <div id="wall-paper-border-left" class="col-md-2 wall-paper-border"></div> -->
         <form id="generalForm" name="generalForm">
           <div class="about-you-container">
             <h2 class="victory">About You</h2>
@@ -63,19 +62,12 @@
               <label>Height:</label>
               <select name="height">
                 <option value="short">Under 5'8"</option>
-                <!-- <option value="medium">5'5" to 5'9"</option> -->
                 <option value="tall">Over 5'8"</option>
               </select>
             </div>
-            <div class="form-group">
-              <label>Bio:</label>
+            <div class="form-group" id="bioPosition">
+              <label id="bio">Bio:</label>
               <textarea name="userBio" rows="4" cols="30" required></textarea>
-            </div>
-            <div class="form-group">
-              <p>Send a Polaroid to this P.O. box address:</p>
-              <p>123 I Don't Know</p>
-              <p>Portland, OR 97336</p>
-              <!-- <input type="file" name="userImage" accept="image/*"> -->
             </div>
           </div>
 
@@ -84,8 +76,8 @@
             <div>
               Gender:
               <select name="gender">
-                <option value="female">dudette</option>
-                <option value="male">dude</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
               </select>
             </div>
             <div>
@@ -93,7 +85,7 @@
               <select name="sexualPreference">
                 <option value="male">Guy</option>
                 <option value="female">Gal</option>
-                <option value="noPreference">No Preference</option>
+                <option value="noPreference">Both</option>
               </select>
             </div>
             <div>
@@ -107,7 +99,6 @@
               Height Preference:
               <select name="heightPreference">
                 <option value="short">Short (shorter than 5'8")</option>
-                <!-- <option value="medium">Medium (between 5'5" and 5'9")</option> -->
                 <option value="tall">Tall (5'8" or taller)</option>
               </select>
             </div>
@@ -115,7 +106,7 @@
               Relationship Goal:
               <select name="relationshipGoal">
                 <option value="casual">Casual</option>
-                <option value="marriage">Marriage</option>
+                <option value="marriage">Serious</option>
               </select>
             </div>
             <button id="submitGeneralFormButton" type="submit" class="btn btn-warning" name="button">Take the personality quiz!</button>
@@ -125,7 +116,7 @@
     </div>
     <div class="personality-container">
       <form id="personalityForm">
-        <h2>Personality Section</h2>
+        <h2>Personality Quiz</h2>
         <div class="questions-container">
           <div class="answers">
             <h4>Who are you at the house party?</h4>
@@ -150,13 +141,13 @@
             <div class="radio">
               <label>
                 <input class="questions" type="radio" name="questionOne" value="d">
-                The one taking care of my drunk friend, Nancy.
+                The one taking care of my drunk friend.
               </label>
             </div>
           </div>
 
           <div class="answers">
-            <h4>What's your go-to dance?</h4>
+            <h4>What's your go-to dance move?</h4>
             <div class="radio">
               <label>
                 <input class="questions" type="radio" name="questionTwo" value="c" checked>
@@ -166,19 +157,19 @@
             <div class="radio">
               <label>
                 <input class="questions" type="radio" name="questionTwo" value="b">
-                Dancing La Macarena.
+                La Macarena
               </label>
             </div>
             <div class="radio">
               <label>
                 <input class="questions" type="radio" name="questionTwo" value="a">
-                Doing The Worm.
+                The Worm
               </label>
             </div>
             <div class="radio">
               <label>
                 <input class="questions" type="radio" name="questionTwo" value="d">
-                The Butt.
+                The Butt
               </label>
             </div>
           </div>
@@ -274,6 +265,7 @@
       <div class="matches-container">
         <h2>Here are your amazing matches:</h2>
         <div class="row" id="personList"></div>
+        <button id="backToTop" type="submit" class="btn btn-warning btn-lg" name="button">New User?</button>
       </div>
     </div>
 
